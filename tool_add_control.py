@@ -1,6 +1,13 @@
 import sys
 import os
+# 引入clash 下载huggyingface模型
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+import os
 
+os.environ['CURL_CA_BUNDLE'] = ''
+os.environ["http_proxy"] = "http://127.0.0.1:7890"
+os.environ["https_proxy"] = "http://127.0.0.1:7890"
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 assert len(sys.argv) == 3, 'Args are wrong.'
 
 input_path = sys.argv[1]
